@@ -22,4 +22,16 @@ public class FizzBuzz
         }
         return k;
     }
+
+    public String makeFizz()
+    {
+        int k = 1;
+        for(int i = 0; i < 5; i++)
+        {
+            k += 1;
+            System.out.println(k);
+        }
+        String str = Integer.toString(k);
+        return str;
+    }
 }
