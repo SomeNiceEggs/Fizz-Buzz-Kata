@@ -51,4 +51,17 @@ public class FizzBuzz
             return str;
         }
     }
+
+    public String makeBuzz()
+    {
+        int k = 0;
+        for(int i = 0; i < 10; i++)
+        {
+            k += 1;
+            System.out.println(k);
+        }
+        
+        String str = Integer.toString(k);
+        return str;
+    }
 }
