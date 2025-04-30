@@ -20,17 +20,23 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class FizzBuzzTests 
 {
+    private FizzBuzz f;
+
+    @BeforeEach
+    public void setUp()
+    {
+        f = new FizzBuzz();
+    }
+    
     @Test
 	public void testGetNumbers()
     {
-        FizzBuzz f = new FizzBuzz();
         assertEquals(100, f.getNumbers());
     }
 
     // @Test
     // public void testMakeFizz()
     // {
-    //     FizzBuzz f = new FizzBuzz();
     //     assertEquals("Fizz", f.makeFizz());
     // }
 }

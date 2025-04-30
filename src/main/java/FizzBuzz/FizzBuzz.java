@@ -14,8 +14,8 @@ public class FizzBuzz
 {
 	public int getNumbers()
     {
-        int k = 1;
-        for(int i = 0; i < 99; i++)
+        int k = 0;
+        for(int i = 0; i < 100; i++)
         {
             k += 1;
             System.out.println(k);
@@ -25,11 +25,20 @@ public class FizzBuzz
 
     public String makeFizz()
     {
-        int k = 1;
-        for(int i = 0; i < 5; i++)
+        int k = 0;
+        for(int i = 0; i < 6; i++)
         {
             k += 1;
-            System.out.println(k);
+            
+            if(k % 3 == 0)
+            {
+                String f = "Fizz";
+                System.out.println(f);
+            }
+            else
+            {
+                System.out.println(k);
+            }
         }
         String str = Integer.toString(k);
         return str;
