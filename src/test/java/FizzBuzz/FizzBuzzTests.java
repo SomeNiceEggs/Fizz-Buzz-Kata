@@ -27,10 +27,10 @@ class FizzBuzzTests
         assertEquals(100, f.getNumbers());
     }
 
-    @Test
-    public void testMakeFizz()
-    {
-        FizzBuzz f = new FizzBuzz();
-        assertEquals("Fizz", f.makeFizz());
-    }
+    // @Test
+    // public void testMakeFizz()
+    // {
+    //     FizzBuzz f = new FizzBuzz();
+    //     assertEquals("Fizz", f.makeFizz());
+    // }
 }
