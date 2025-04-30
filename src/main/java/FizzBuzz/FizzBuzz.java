@@ -55,13 +55,28 @@ public class FizzBuzz
     public String makeBuzz()
     {
         int k = 0;
+        String b = "Buzz";
         for(int i = 0; i < 10; i++)
         {
             k += 1;
-            System.out.println(k);
+            if(k % 5 == 0)
+            {
+                System.out.println(b);
+            }
+            else
+            {
+                System.out.println(k);
+            }
         }
         
-        String str = Integer.toString(k);
-        return str;
+        if(k % 5 == 0)
+        {
+            return b;
+        }
+        else
+        {
+            String str = Integer.toString(k);
+            return str;
+        }
     }
 }
