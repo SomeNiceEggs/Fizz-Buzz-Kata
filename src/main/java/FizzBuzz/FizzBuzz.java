@@ -107,4 +107,16 @@ public class FizzBuzz
         lastNum = checkLastBuzz(k);
         return lastNum;
     }
+
+    public String makeFizzBuzz()
+    {
+        for(int i = 0; i < 15; i++)
+        {
+            k += 1;
+            System.out.println(k);
+        }
+        String str = Integer.toString(k);
+        return str;
+    }
+
 }

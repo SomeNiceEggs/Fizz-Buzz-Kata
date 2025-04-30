@@ -12,6 +12,8 @@ package com.example.project;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.beans.Transient;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
@@ -44,5 +46,11 @@ class FizzBuzzTests
     public void testMakeBuzz()
     {
         assertEquals("Buzz", f.makeBuzz());
+    }
+
+    @Test
+    public void testMakeFizzBuzz()
+    {
+        assertEquals("FizzBuzz", f.makeFizzBuzz());
     }
 }
