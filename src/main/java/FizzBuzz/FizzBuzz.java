@@ -26,13 +26,13 @@ public class FizzBuzz
     public String makeFizz()
     {
         int k = 0;
+        String f = "Fizz";
         for(int i = 0; i < 6; i++)
         {
             k += 1;
             
             if(k % 3 == 0)
             {
-                String f = "Fizz";
                 System.out.println(f);
             }
             else
@@ -40,7 +40,15 @@ public class FizzBuzz
                 System.out.println(k);
             }
         }
-        String str = Integer.toString(k);
-        return str;
+
+        if(k % 3 == 0)
+        {
+            return f;
+        }
+        else
+        {
+            String str = Integer.toString(k);
+            return str;
+        }
     }
 }
