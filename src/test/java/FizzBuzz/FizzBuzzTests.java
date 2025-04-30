@@ -20,5 +20,10 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class FizzBuzzTests 
 {
-	
+    @Test
+	public void testGetNumbers()
+    {
+        FizzBuzz f = new FizzBuzz();
+        assertEquals(100, f.getNumbers());
+    }
 }

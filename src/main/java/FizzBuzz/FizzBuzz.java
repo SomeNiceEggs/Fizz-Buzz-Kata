@@ -12,5 +12,9 @@ package com.example.project;
 
 public class FizzBuzz 
 {
-	
+	public int getNumbers()
+    {
+        int i = 1;
+        return i;
+    }
 }
