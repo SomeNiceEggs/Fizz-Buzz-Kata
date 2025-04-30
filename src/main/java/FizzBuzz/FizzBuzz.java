@@ -12,9 +12,13 @@ package com.example.project;
 
 public class FizzBuzz 
 {
+    private int k = 0;
+    private String f = "Fizz";
+    private String b = "Buzz";
+    private String lastNum = "";
+    
 	public int getNumbers()
     {
-        int k = 0;
         for(int i = 0; i < 100; i++)
         {
             k += 1;
@@ -23,15 +27,9 @@ public class FizzBuzz
         return k;
     }
 
-    public String makeFizz()
+    public void checkIfFizz(int k)
     {
-        int k = 0;
-        String f = "Fizz";
-        for(int i = 0; i < 6; i++)
-        {
-            k += 1;
-            
-            if(k % 3 == 0)
+        if(k % 3 == 0)
             {
                 System.out.println(f);
             }
@@ -39,6 +37,53 @@ public class FizzBuzz
             {
                 System.out.println(k);
             }
+    }
+
+    public void checkIfBuzz(int k)
+    {
+        if(k % 5 == 0)
+        {
+            System.out.println(b);
+        }
+        else
+        {
+            System.out.println(k);
+        }
+    }
+
+    public String checkLastBuzz(int k)
+    {
+        if(k % 5 == 0)
+        {
+            return b;
+        }
+        else
+        {
+            String str = Integer.toString(k);
+            return str;
+        }
+    }
+
+    public String checkLastFizz(int k)
+    {
+        if(k % 3 == 0)
+        {
+            return f;
+        }
+        else
+        {
+            String str = Integer.toString(k);
+            return str;
+        }
+    }
+
+    public String makeFizz()
+    {
+        for(int i = 0; i < 6; i++)
+        {
+            k += 1;
+            
+            checkIfFizz(k);
         }
 
         if(k % 3 == 0)
@@ -54,29 +99,12 @@ public class FizzBuzz
 
     public String makeBuzz()
     {
-        int k = 0;
-        String b = "Buzz";
         for(int i = 0; i < 10; i++)
         {
             k += 1;
-            if(k % 5 == 0)
-            {
-                System.out.println(b);
-            }
-            else
-            {
-                System.out.println(k);
-            }
+            checkIfBuzz(k);
         }
-        
-        if(k % 5 == 0)
-        {
-            return b;
-        }
-        else
-        {
-            String str = Integer.toString(k);
-            return str;
-        }
+        lastNum = checkLastBuzz(k);
+        return lastNum;
     }
 }
