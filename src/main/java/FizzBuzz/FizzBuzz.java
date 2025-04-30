@@ -14,7 +14,12 @@ public class FizzBuzz
 {
 	public int getNumbers()
     {
-        int i = 1;
-        return i;
+        int k = 1;
+        for(int i = 0; i < 99; i++)
+        {
+            k += 1;
+            System.out.println(k);
+        }
+        return k;
     }
 }
