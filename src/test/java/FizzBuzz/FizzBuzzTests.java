@@ -13,6 +13,7 @@ package com.example.project;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.beans.Transient;
+import java.io.IOException;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -46,6 +47,24 @@ class FizzBuzzTests
     public void testMakeBuzz()
     {
         assertEquals("Buzz", f.makeBuzz());
+    }
+
+    @Test
+    public void exceptionTestCheckIfFizz() throws IOException
+    {
+        String w = "";
+        boolean thrown = false;
+
+        try
+        {
+            f.checkIfFizz(w);
+        } 
+        catch(IOException exc)
+        {
+            System.out.println("Invalid argument error");
+            thrown = true;
+        }
+        assertTrue(thrown);
     }
 
     // @Test
